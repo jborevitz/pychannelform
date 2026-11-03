@@ -12,26 +12,7 @@ dist, z = long_profile(dem, path, res=3.0)
 grades = reach_grades(dist, z, bin_m=100.0)
 ```
 
-## Trace downstream, not upstream
-
-Each cell has exactly one receiver, so downstream tracing is unambiguous. Walking
-upstream forks at every junction and a "follow the biggest donor" rule terminates
-early in flat or filled reaches. `longest_path` starts from channel heads and traces
-down.
-
-## Clip late
-
-A property boundary is a legal object, not a hydrological one. Delineate on a buffered
-grid and clip only when reporting: at Avonside, 76% of the creek bowl's 88.7 ha
-catchment lies outside the title, and routing on the boundary alone starves exactly
-the hollows you are looking for.
-
-## Grade, not degrees
-
-`reach_grades` returns a fraction; multiply by 100 for percent. 100% is 45°, and the
-two units are confused constantly — label both on every figure.
-
-## Worked example — a creek bowl that is mostly someone else's
+## What it found at 845 Avonside
 
 ![Catchment and wetness](docs/catchment_and_wetness.png)
 
@@ -46,3 +27,13 @@ to other outlets entirely. The block straddles a divide; it is not one water sys
 a 38–42% chute through its middle. Tributary junctions are marked with the direction
 each arrives from — only the lowest one, at 962.3 m, actually captures the northern
 neighbour's catchment.*
+
+## Methods
+
+The conventions this package enforces, the traps it exists to prevent, and what it
+deliberately does not do are in **[`docs/methods.md`](docs/methods.md)**.
+
+Methods and results are kept apart on purpose. The methods travel to any site and
+will be re-checked against new ground and simulated data; the findings above are one
+47 ha property in the Snowy Monaro, some of them specific to it and some likely to
+generalise. Either can then be argued with without disturbing the other.
