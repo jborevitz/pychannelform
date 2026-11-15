@@ -74,6 +74,50 @@ and the chute through the middle is where the gradient — and the risk — conc
 Where that water can usefully be held, and what it costs to get it back uphill, is
 [`pylandstore`](https://github.com/jborevitz/pylandstore).
 
+### Choosing the catchment a soil-water model runs on
+
+![Catchments at 845 Avonside](docs/avonside_catchments.png)
+
+*The 46.81 ha title drains three ways: **north-east** (215 ha, carrying 30.4 ha of
+the title), **south-east** (38 ha, 11.5 ha) and **west** (>375 ha but truncated by the
+tile block, 4.8 ha). Panel b takes the north-east system apart: four tributaries —
+the main drainage from the south (34 ha), Jacob's Creek down the middle of the farm
+(13 ha), the south creek into Eva's pond (11 ha) and the north creek that clips the
+boundary (30 ha) — plus 48 ha of trunk hillslope.*
+
+The outlet is **E 655084, N 5966608 (MGA55), 930 m**, the trunk cell immediately above
+the junction where a 44 ha northern tributary arrives. That point closes **112.6 ha**
+inside the four-tile DEM and holds **30.2 ha of the title — every hectare of it that
+drains north-east**.
+
+The instructive part is what further outlets buy. A gorge 230 m downstream closes a
+tidy 179.7 ha, and the tile edge closes 214.8 ha; **neither adds a single hectare of
+title.** Going downstream for a cleaner-looking catchment spends the model's
+topographic-index distribution on land the owner cannot act on. Stop at the last
+junction that still adds ground you manage.
+
+Routing every title cell to the creek also corrects an intuition. The block's
+north-facing woodland (85.4% of it within 45° of north) feeds the trunk at **69
+separate entry points over a median 196 m** — it is the valley's north wall, not a
+catchment of its own. The long paths belong to the open farm land at the top: a
+median **709 m**, arriving at just two cells.
+
+> Note on an earlier figure above: the 88.7 ha "creek bowl" reported from this block
+> was delineated at the tributary junction 300 m upstream of this outlet, on an
+> earlier two-tile surface. Re-measured on the four-tile grid that junction closes
+> 90.5 ha with 19.9 ha inside the title. The ~2% difference in area and 7% in title
+> share is a DEM-build difference, not a change of definition.
+
+### The soil store in one cell
+
+![Soil water in one cell](docs/soil_water_cell.png)
+
+*Three levels and two bands. Only water between field capacity and saturation drains,
+and that drainage is what feeds a saturated store and becomes baseflow. Only water
+between field capacity and wilting point feeds plants. Everything below wilting point
+is real but is deliberately outside the model.*
+
+
 ## Methods
 
 The conventions this package enforces, the traps it exists to prevent, and what it
