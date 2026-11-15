@@ -120,6 +120,27 @@ between field capacity and wilting point feeds plants. Everything below wilting 
 is real but is deliberately outside the model.*
 
 
+### What the soil under it is made of
+
+![Topsoil texture over the four-tile block](docs/avonside_slga_texture.png)
+
+*SLGA v2 topsoil (0–5 cm) over the four LiDAR tiles: red = clay, green = sand, blue =
+silt, each channel stretched over its own range so the variation shows. In true
+proportion the block reads almost pure green — **sand is 69–81% everywhere**. The
+blocky edges are SLGA's 90 m grid, 30× coarser than the 3 m terrain shaded beneath it.*
+
+The soil is sandy on shallow regolith, and the finer-textured ground sits over the
+western half of the title. The number that matters for a water balance is not texture
+but **depth: mapped soil is 0.53 m while depth to rock is 1.68 m**, so roughly 1.16 m
+of weathered material lies below the soil — the store a subsoil basin would occupy,
+and deeper than the usual 1 m rooting assumption.
+
+Available water capacity is **110 mm over a 1 m profile and only 38 mm over 0.3 m**,
+so the difference between a grass root zone and a tree root zone is nearly threefold.
+
+The clipped layers are committed in [`data/slga/`](data/slga/) with their provenance
+and CC BY attribution — 44 layers over a 56 × 66 pixel window.
+
 ## Methods
 
 The conventions this package enforces, the traps it exists to prevent, and what it
