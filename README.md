@@ -83,7 +83,9 @@ the title), **south-east** (38 ha, 11.5 ha) and **west** (>375 ha but truncated 
 tile block, 4.8 ha). Panel b takes the north-east system apart: four tributaries —
 the main drainage from the south (34 ha), Jacob's Creek down the middle of the farm
 (13 ha), the south creek into Eva's pond (11 ha) and the north creek that clips the
-boundary (30 ha) — plus 48 ha of trunk hillslope.*
+boundary (30 ha) — 87.8 ha in all, plus 24.8 ha of trunk hillslope draining straight
+to the channel, giving the 112.6 ha domain. (The full 215 ha north-east system, three
+tributaries further downstream, carries 48.5 ha of trunk hillslope.)*
 
 The outlet is **E 655084, N 5966608 (MGA55), 930 m**, the trunk cell immediately above
 the junction where a 44 ha northern tributary arrives. That point closes **112.6 ha**
